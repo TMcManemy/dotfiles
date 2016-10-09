@@ -1,0 +1,10 @@
+[user]
+  email = tim.mcmanemy@gmail.com
+  name = Tim McManemy
+[core]
+  editor = vim
+[alias]
+  st = status
+  co = checkout
+  di = diff
+  ci = commit
