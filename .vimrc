@@ -1,6 +1,8 @@
 " Plugins (managed with vim-plug)
 call plug#begin()
 Plug 'https://github.com/scrooloose/nerdtree'
+Plug 'https://github.com/tpope/vim-fugitive'
+Plug 'https://github.com/thoughtbot/vim-rspec'
 call plug#end()
 
 let mapleader=","    " override default leader '\' to ',' 
@@ -16,3 +18,9 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" RSpec.vim mappings
+map <leader>t :call RunCurrentSpecFile()<CR>
+map <leader>s :call RunNearestSpec()<CR>
+map <leader>l :call RunLastSpec()<CR>
+map <leader>a :call RunAllSpecs()<CR>
