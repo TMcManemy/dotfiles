@@ -3,6 +3,7 @@ call plug#begin()
 Plug 'https://github.com/scrooloose/nerdtree'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/thoughtbot/vim-rspec'
+Plug 'https://github.com/scrooloose/syntastic'
 call plug#end()
 
 let mapleader=","    " override default leader '\' to ',' 
@@ -24,3 +25,13 @@ map <leader>t :call RunCurrentSpecFile()<CR>
 map <leader>s :call RunNearestSpec()<CR>
 map <leader>l :call RunLastSpec()<CR>
 map <leader>a :call RunAllSpecs()<CR>
+
+" Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
