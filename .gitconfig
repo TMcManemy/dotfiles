@@ -8,3 +8,4 @@
   co = checkout
   di = diff
   ci = commit
+  br = branch
