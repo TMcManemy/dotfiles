@@ -5,6 +5,9 @@ sudo apt install dropbox
 sudo apt install keepass
 sudo apt install tmux
 
+# ack
+sudo apt install ack-grep
+
 # git
 sudo apt install git
 sudo apt install tig

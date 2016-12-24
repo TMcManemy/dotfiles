@@ -4,6 +4,7 @@ Plug 'https://github.com/scrooloose/nerdtree'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/thoughtbot/vim-rspec'
 Plug 'https://github.com/scrooloose/syntastic'
+Plug 'https://github.com/mileszs/ack.vim'
 call plug#end()
 
 let mapleader=","    " override default leader '\' to ',' 
