@@ -12,6 +12,8 @@ set shiftwidth=2     " indent text by two columns
 filetype indent on   " load the index file for specific file types
 set number           " display line numbers
 set statusline+=%f   " display relative file name in statusline
+set hlsearch         " highlight the latest search pattern
+set incsearch        " enable incremental searching (as you type)
 
 " Toggle NERDTree
 map <leader>n :NERDTreeToggle<CR>
