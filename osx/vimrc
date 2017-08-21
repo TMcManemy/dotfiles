@@ -1,0 +1,45 @@
+" Plugins (managed with vim-plug)
+call plug#begin()
+Plug 'https://github.com/scrooloose/nerdtree'
+Plug 'https://github.com/ctrlpvim/ctrlp.vim'
+Plug 'https://github.com/thoughtbot/vim-rspec'
+Plug 'https://github.com/mileszs/ack.vim'
+call plug#end()
+
+let mapleader=","
+
+filetype plugin indent on
+
+set hlsearch     " highlight the latest search pattern
+set incsearch    " enable incremental searching (as you type)
+set number       " display line numbers
+set shiftwidth=2 " indent text by two columns
+set splitright   " split new vertical windows to the right of the current window
+
+imap jj <Esc> " map a more convient escape key
+nmap <silent> <BS> :nohlsearch<CR> " backspace removes highlighting
+
+" NERDTree
+map <leader>n :NERDTreeToggle<CR>
+map <Leader>f :NERDTreeFind<CR>
+
+" CtrlP
+map <C-p> :CtrlP<CR>
+map <leader>p :CtrlPMixed<CR>
+map <leader>b :CtrlPBuffer<CR>
+map <leader>m :CtrlPMRU<CR>
+
+" Split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" RSpec.vim mappings
+map <leader>t :call RunCurrentSpecFile()<CR>
+map <leader>s :call RunNearestSpec()<CR>
+map <leader>l :call RunLastSpec()<CR>
+map <leader>a :call RunAllSpecs()<CR>
+
+runtime macros/matchit.vim
+
