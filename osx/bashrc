@@ -1,3 +1,46 @@
 export CLICOLOR=1                      # enable terminal colors
 export LSCOLORS=ExFxCxDxBxegedabagacad # define how to color specific items ()
 
+# Customize prompt (depends on git and bash-completion)
+GRAY="\[\e[38;5;245m\]"
+GREEN="\[\e[0;32m\]"
+RED="\[\e[0;31m\]"
+YELLOW="\[\e[0;33m\]"
+COLOR_NONE="\[\e[0m\]"
+
+function git_info {
+  repo_info=$(__git_ps1)
+  pair_info=$(git_pair_info)
+  if [[ $repo_info ]]; then
+    echo "$repo_info $pair_info"
+  fi
+}
+
+function git_pair_info {
+  git config --get user.initials
+}
+
+function prompt_symbol {
+  # Set color of dollar prompt based on return value of previous command.
+  if test "$1" -eq 0
+  then
+    echo "\$"
+  else
+    echo "${RED}\$${COLOR_NONE}"
+  fi
+}
+
+function prompt_func () {
+  last_return_value=$?
+  PS1="\u ${GRAY}at${COLOR_NONE} \h ${YELLOW}\w${COLOR_NONE}${GREEN}$(git_info)${COLOR_NONE}\n$(prompt_symbol $last_return_value) "
+  echo -n -e "\033]0;$USER@$HOSTNAME:$PWD\007\n"
+}
+
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWCOLORHINTS=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
+export GIT_PS1_SHOWSTASHSTATE=1
+export GIT_PS1_SHOWUPSTREAM="verbose"
+
+PROMPT_COMMAND=prompt_func
+

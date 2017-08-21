@@ -6,6 +6,9 @@ echo "Installing/configuring homebrew"
 echo "Installing brew 'ack'"
 brew install ack
 
+echo "Installing brew 'bash-completion'"
+brew install bash-completion
+
 echo "Installing brew 'ctags'"
 brew install ctags
 
