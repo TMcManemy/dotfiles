@@ -1,6 +1,8 @@
 export CLICOLOR=1                      # enable terminal colors
 export LSCOLORS=ExFxCxDxBxegedabagacad # define how to color specific items ()
 
+eval "$(rbenv init -)"                 # initialize rbenv
+
 # Customize prompt (depends on git and bash-completion)
 GRAY="\[\e[38;5;245m\]"
 GREEN="\[\e[0;32m\]"
