@@ -8,6 +8,7 @@ Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/tpope/vim-rails'
 Plug 'https://github.com/jlanzarotta/bufexplorer'
 Plug 'https://github.com/scrooloose/nerdcommenter'
+Plug 'https://github.com/tpope/vim-endwise'
 call plug#end()
 
 let mapleader=","
