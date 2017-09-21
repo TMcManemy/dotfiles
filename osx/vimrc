@@ -15,11 +15,12 @@ let mapleader=","
 
 filetype plugin indent on
 
-set hlsearch     " highlight the latest search pattern
-set incsearch    " enable incremental searching (as you type)
-set number       " display line numbers
-set shiftwidth=2 " indent text by two columns
-set splitright   " split new vertical windows to the right of the current window
+set hlsearch                   " highlight the latest search pattern
+set incsearch                  " enable incremental searching (as you type)
+set number                     " display line numbers
+set shiftwidth=2               " indent text by two columns
+set splitright                 " split new vertical windows to the right of the current window
+set backspace=indent,eol,start "allow backspacing over autoindent, line breaks, and the start of insert
 
 colorscheme Tomorrow-Night
 
