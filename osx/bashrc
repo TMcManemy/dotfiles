@@ -3,6 +3,8 @@ export LSCOLORS=ExFxCxDxBxegedabagacad # define how to color specific items ()
 
 eval "$(rbenv init -)"                 # initialize rbenv
 
+alias ll='ls -lGaf'                     #ll: list contents, long format, colorize output, include hiddens, do not sort
+
 # Customize prompt (depends on git and bash-completion)
 GRAY="\[\e[38;5;245m\]"
 GREEN="\[\e[0;32m\]"
