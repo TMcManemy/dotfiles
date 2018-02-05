@@ -9,6 +9,7 @@ Plug 'https://github.com/tpope/vim-rails'
 Plug 'https://github.com/jlanzarotta/bufexplorer'
 Plug 'https://github.com/scrooloose/nerdcommenter'
 Plug 'https://github.com/tpope/vim-endwise'
+Plug 'https://github.com/christoomey/vim-tmux-navigator'
 call plug#end()
 
 let mapleader=","
