@@ -22,6 +22,9 @@ echo "Installing brew 'rbenv'"
 brew install rbenv
 rbenv init
 
+echo "Installing brew 'reattach-to-user-namespace'"
+brew install reattach-to-user-namespace
+
 echo "Installing brew 'ruby-build'"
 brew install ruby-build
 
